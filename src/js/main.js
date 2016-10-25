@@ -4,17 +4,23 @@ request.send(null);
 var jsonPlayersObject = JSON.parse(request.responseText);
 var playersObject = jsonPlayersObject.players;
 
+var playerSelectBox = document.getElementById("player");
+
 for (var key in playersObject){
     if (playersObject.hasOwnProperty(key)) {
         var playerName = playersObject[key].player.name.first + ' ' +playersObject[key].player.name.last
 
-        populateSelectBox('player', key, playerName);
+        populateSelectBox(key, playerName);
     }
 }
 
-
-function populateSelectBox(selector, key, value)
+function populateSelectBox(key, value)
 {
-    var select = document.getElementById(selector);
-        select.options[select.options.length] = new Option(value, key);
+    playerSelectBox.options[playerSelectBox.options.length] = new Option(value, key);
+}
+
+playerSelectBox.addEventListener('change',  populatePlayerData);
+
+function populatePlayerData(){
+    console.log(playersObject[this.value]);
 }
