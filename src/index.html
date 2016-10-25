@@ -3,79 +3,11 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
-    <style>
-
-        h1{
-            color: white;
-            font-size: 25px;
-            font-weight: 300;
-        }
-        h2 {
-            color: white;
-            font-size: 15px;
-            font-weight: 300;
-        }
-        .badge {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            bottom: -220px;
-            position: relative;
-            float: right;
-            margin-right: 15px;
-        }
-        [id="21"] {
-            background: url(assets/badges_sprite.png) -500px 100px;
-
-        }
-        [id="11"] {
-            background: url(assets/badges_sprite.png) -800px 400px
-
-        }
-        [id="12"] {
-            background: url(assets/badges_sprite.png) -600px 300px;
-
-        }
-        [id="1"] {
-            background: url(assets/badges_sprite.png) -100px -100px;
-        }
-        [id="26"] {
-            background: url(assets/badges_sprite.png) 0 0;
-
-        }
-
-        #player{
-            width: 100%;
-            background: lightgray;
-            height: 40px;
-            margin-top: 10px;
-            padding-left: 10px;
-        }
-
-        .informationBody{
-            background: #e90053;
-            padding: 0 15px 5px;
-        }
-
-        ul{
-            padding:0px;
-            list-style: none;
-
-        }
-        li{
-            background: lightgray;
-            margin-bottom: 2px;
-            padding:5px 10px;
-        }
-        li > span{
-            float: right;
-            font-weight: 800;
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>Pulselive test</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -87,15 +19,19 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <select id="player">
-                <option value="">Select a player...</option>
-            </select>
+
+            <div class="parent">
+                <div class="arrow">&#8250;</div>
+                <select class="dropdown" id="player">
+                    <option value="">Select a player...</option>
+                </select>
+            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-xs-8">
-            <img id="player_image" />
+            <img id="player_image" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Player Image"/>
         </div>
         <div class="col-xs-4">
             <div class="badge"></div>
