@@ -42,7 +42,10 @@ function populatePlayerData(){
 
         //Only update the html with data that has an index value that matches either, appearances, goals or goal_assist
         if(['appearances', 'goals', 'goal_assist'].indexOf(playerStat.name) > -1) {
-            document.getElementById(playerStat.name).innerHTML = playerStat.value;
+
+            var targetElement = document.getElementById(playerStat.name);
+            var value = playerStat.value;
+            createSpanChild(targetElement, value);
         }
 
         playerStats[playerStat.name] = playerStat.value;
@@ -51,7 +54,20 @@ function populatePlayerData(){
     playerStats.goals_per_match = (playerStats.goals / (playerStats.mins_played / matchDuration)).toFixed(2);
     playerStats.passes_per_minute = ((playerStats.fwd_pass + playerStats.backward_pass) / playerStats.mins_played).toFixed(2);
 
-    document.getElementById('goals_per_match').innerHTML = playerStats.goals_per_match;
-    document.getElementById('passes_per_minute').innerHTML = playerStats.passes_per_minute;
+    var goalsPerMatchElement = document.getElementById('goals_per_match');
+    var passesPerMinuteElement = document.getElementById('passes_per_minute');
+    createSpanChild(goalsPerMatchElement, playerStats.goals_per_match);
+    createSpanChild(passesPerMinuteElement, playerStats.passes_per_minute);
 
+}
+
+function createSpanChild(targetElement, value)
+{
+    var spanNode = document.createElement("SPAN");
+    var textNode = document.createTextNode(value);
+    spanNode.appendChild(textNode);
+
+    while(targetElement.childElementCount) targetElement.removeChild(targetElement.lastChild); //remove child nodes
+
+    targetElement.appendChild(spanNode);
 }
