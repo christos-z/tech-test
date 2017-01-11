@@ -1,0 +1,25 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+nav {
+  display: flex;
+  align-items: center;
+  .nav-icon {
+    margin:0 0.5px;
+    height: 58px;
+    width: 82px;
+    background: url(../../../assets/img/sprite.png);
+  }
+  .poker {
+    background-position: -8px 115px;
+  }
+  .casino {
+    background-position: -91px 115px;
+  }
+  .sports {
+    background-position: -174px 115px;
+  }
+  .live {
+    background-position: -258px 115px;
+  }
+}
