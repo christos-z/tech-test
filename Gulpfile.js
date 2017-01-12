@@ -4,7 +4,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-var input = 'assets/stylesheets/scss/**/*.scss';
+var watchFiles = 'assets/stylesheets/scss/**/*.scss';
+var input = 'assets/stylesheets/scss/bootstrap.scss';
 var output = 'assets/stylesheets/css';
 
 var sassOptions = {
@@ -21,7 +22,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function() {
     return gulp
-        .watch(input, ['sass'])
+        .watch(watchFiles, ['sass'])
         .on('change', function(event) {
             console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
         });

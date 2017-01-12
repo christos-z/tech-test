@@ -1,43 +1,74 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-
+@import "scaffolding";
+@import "nav";
+@import "promotion-cover";
 .main-content {
   padding: 1px;
-  nav {
-	display: flex;
-	align-items: center;
-	.nav-icon {
-	  margin:0 0.5px;
-	  height: 58px;
-	  width: 82px;
-	  background: url(../../../assets/img/sprite.png);
-	  background-position-y: 115px;
-	}
-	:hover{
-	  background-position-y: 58px;
-	}
-	.poker {
-	  background-position-x: -8px;
-	}
-	.casino {
-	  background-position-x: -91px;
-	}
-	.sports {
-	  background-position-x: -174px;
-	}
-	.live {
-	  background-position-x: -258px;
-	}
+  background: #000000;
+  max-width: 750px;
+}
+.brand {
+    font-weight: 800;
+    font-size: 2em;
+    background: linear-gradient(#FF5751, darkred);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right:10px;
+}
+
+.banner-content {
+  padding: 30px;
+
+  .no-padding{
+    padding:0;
   }
-  .sub-nav, .sub-nav > a {
-	color:red;
+  color:white;
+  text-align: center;
+  ul {
+    padding:0;
+    list-style: none;
   }
-  .promotion-cover {
-	background: url(http://placehold.it/500x150);
-	height:200px;
-//	width:500px;
-//	background-size: contain;
+  .cta-banner{
+    cursor: pointer;
+    display: inline-block;
+    height: 120px;
+    width: 237px;
+    background: url(../../../assets/img/sprite.png);
+    &__poker{
+    }
+    &__casino{
+      background-position-x: 480px;
+    }
+    &__sports{
+      background-position-x: 237px;
+    }
+    &__poker:hover, &__casino:hover, &__sports:hover {
+       background-position-y: -154px;
+    }
   }
-  background:#000000;
-  width:900px;
+  .show-more-info {
+    display: block;
+    background: #16191C;
+    margin: 0px -30px;
+    padding: 5px;
+    a {
+      color:white;
+      text-decoration: none;
+      margin-bottom: 100px;
+    }
+    &__content {
+      p {
+        padding:30px;
+        text-align: left;
+      }
+    }
+  }
+  .betting-links {
+    margin-top:10px;
+    font-family: Verdana, "sans-serif";
+    font-size: 9px;
+  }
+}
+.white {
+  color:white;
 }

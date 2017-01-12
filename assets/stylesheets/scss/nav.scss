@@ -1,0 +1,39 @@
+nav {
+  display: flex;
+  align-items:center ;
+  .nav-icon {
+    flex-shrink: 0;
+    margin:0 0.5px;
+    height: 57px;
+    width: 82px;
+    background: url(../../../assets/img/sprite.png);
+    background-position-y: 115px;
+  }
+  .nav-icon:hover{
+    cursor: pointer;
+    background-position-y: 57px;
+  }
+  .poker {
+    background-position-x: -8px;
+  }
+  .casino {
+    background-position-x: -91px;
+  }
+  .sports {
+    background-position-x: -174px;
+  }
+  .live {
+    background-position-x: -258px;
+  }
+}
+.sub-nav {
+  display: inline-block;
+  background: #1B2226;
+  width: 100%;
+
+}
+.sub-nav, .sub-nav > a {
+  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:11px;
+  color:#85A5B1;
+}
