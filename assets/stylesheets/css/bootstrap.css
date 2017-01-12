@@ -7736,30 +7736,50 @@ button.close {
   }
 }
 
-nav {
+.main-content {
+  padding: 1px;
+  background: #000000;
+  width: 900px;
+}
+
+.main-content nav {
   display: flex;
   align-items: center;
 }
 
-nav .nav-icon {
+.main-content nav .nav-icon {
   margin: 0 0.5px;
   height: 58px;
   width: 82px;
   background: url(../../../assets/img/sprite.png);
+  background-position-y: 115px;
 }
 
-nav .poker {
-  background-position: -8px 115px;
+.main-content nav :hover {
+  background-position-y: 58px;
 }
 
-nav .casino {
-  background-position: -91px 115px;
+.main-content nav .poker {
+  background-position-x: -8px;
 }
 
-nav .sports {
-  background-position: -174px 115px;
+.main-content nav .casino {
+  background-position-x: -91px;
 }
 
-nav .live {
-  background-position: -258px 115px;
+.main-content nav .sports {
+  background-position-x: -174px;
+}
+
+.main-content nav .live {
+  background-position-x: -258px;
+}
+
+.main-content .sub-nav, .main-content .sub-nav > a {
+  color: red;
+}
+
+.main-content .promotion-cover {
+  background: url(http://placehold.it/500x150);
+  height: 200px;
 }

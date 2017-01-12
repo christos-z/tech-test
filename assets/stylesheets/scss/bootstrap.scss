@@ -1,25 +1,43 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
-nav {
-  display: flex;
-  align-items: center;
-  .nav-icon {
-    margin:0 0.5px;
-    height: 58px;
-    width: 82px;
-    background: url(../../../assets/img/sprite.png);
+.main-content {
+  padding: 1px;
+  nav {
+	display: flex;
+	align-items: center;
+	.nav-icon {
+	  margin:0 0.5px;
+	  height: 58px;
+	  width: 82px;
+	  background: url(../../../assets/img/sprite.png);
+	  background-position-y: 115px;
+	}
+	:hover{
+	  background-position-y: 58px;
+	}
+	.poker {
+	  background-position-x: -8px;
+	}
+	.casino {
+	  background-position-x: -91px;
+	}
+	.sports {
+	  background-position-x: -174px;
+	}
+	.live {
+	  background-position-x: -258px;
+	}
   }
-  .poker {
-    background-position: -8px 115px;
+  .sub-nav, .sub-nav > a {
+	color:red;
   }
-  .casino {
-    background-position: -91px 115px;
+  .promotion-cover {
+	background: url(http://placehold.it/500x150);
+	height:200px;
+//	width:500px;
+//	background-size: contain;
   }
-  .sports {
-    background-position: -174px 115px;
-  }
-  .live {
-    background-position: -258px 115px;
-  }
+  background:#000000;
+  width:900px;
 }
