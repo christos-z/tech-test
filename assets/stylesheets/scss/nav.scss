@@ -1,6 +1,8 @@
-nav {
+.nav {
   display: flex;
+  display: -webkit-flex;
   align-items:center ;
+  -webkit-align-items:center ;
   .nav-icon {
     flex-shrink: 0;
     margin:0 0.5px;
@@ -27,12 +29,9 @@ nav {
   }
 }
 .sub-nav {
-  display: inline-block;
   background: #1B2226;
-  width: 100%;
-
 }
-.sub-nav, .sub-nav > a {
+.sub-nav > span, .sub-nav > span > a {
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:11px;
   color:#85A5B1;

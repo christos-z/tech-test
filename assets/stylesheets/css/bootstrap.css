@@ -7744,12 +7744,14 @@ button.close {
   padding-right: 15px;
 }
 
-nav {
+.nav {
   display: flex;
+  display: -webkit-flex;
   align-items: center;
+  -webkit-align-items: center;
 }
 
-nav .nav-icon {
+.nav .nav-icon {
   flex-shrink: 0;
   margin: 0 0.5px;
   height: 57px;
@@ -7758,34 +7760,32 @@ nav .nav-icon {
   background-position-y: 115px;
 }
 
-nav .nav-icon:hover {
+.nav .nav-icon:hover {
   cursor: pointer;
   background-position-y: 57px;
 }
 
-nav .poker {
+.nav .poker {
   background-position-x: -8px;
 }
 
-nav .casino {
+.nav .casino {
   background-position-x: -91px;
 }
 
-nav .sports {
+.nav .sports {
   background-position-x: -174px;
 }
 
-nav .live {
+.nav .live {
   background-position-x: -258px;
 }
 
 .sub-nav {
-  display: inline-block;
   background: #1B2226;
-  width: 100%;
 }
 
-.sub-nav, .sub-nav > a {
+.sub-nav > span, .sub-nav > span > a {
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: #85A5B1;
@@ -7819,6 +7819,7 @@ nav .live {
   border: 5px black solid;
   border-radius: 10px;
   display: flex;
+  display: -webkit-flex;
   margin: 125px auto;
 }
 
@@ -7826,10 +7827,17 @@ nav .live {
   background-position-y: -370px;
 }
 
-.main-content {
-  padding: 1px;
+.wrapper {
+  background: red;
+}
+
+.container {
   background: #000000;
   max-width: 750px;
+}
+
+.main-content {
+  padding: 1px;
 }
 
 .brand {
@@ -7876,28 +7884,32 @@ nav .live {
   background-position-y: -154px;
 }
 
-.banner-content .show-more-info {
+.show-more-info {
   display: block;
   background: #16191C;
-  margin: 0px -30px;
   padding: 5px;
+  text-align: center;
 }
 
-.banner-content .show-more-info a {
+.show-more-info a {
   color: white;
   text-decoration: none;
   margin-bottom: 100px;
 }
 
-.banner-content .show-more-info__content p {
+.show-more-info__content p {
   padding: 30px;
   text-align: left;
 }
 
-.banner-content .betting-links {
+.betting-links {
   margin-top: 10px;
   font-family: Verdana, "sans-serif";
   font-size: 9px;
+}
+
+footer {
+  margin-top: 10px;
 }
 
 .white {

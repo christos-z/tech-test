@@ -2,10 +2,17 @@
 @import "scaffolding";
 @import "nav";
 @import "promotion-cover";
-.main-content {
-  padding: 1px;
+
+.wrapper {
+background: red;
+}
+.container {
   background: #000000;
   max-width: 750px;
+}
+
+.main-content{
+  padding:1px;
 }
 .brand {
     font-weight: 800;
@@ -46,28 +53,33 @@
        background-position-y: -154px;
     }
   }
-  .show-more-info {
-    display: block;
-    background: #16191C;
-    margin: 0px -30px;
-    padding: 5px;
-    a {
-      color:white;
-      text-decoration: none;
-      margin-bottom: 100px;
-    }
-    &__content {
-      p {
-        padding:30px;
-        text-align: left;
-      }
-    }
+}
+
+.show-more-info {
+  display: block;
+  background: #16191C;
+  padding: 5px;
+  text-align: center;
+  a {
+	color:white;
+	text-decoration: none;
+	margin-bottom: 100px;
   }
-  .betting-links {
-    margin-top:10px;
-    font-family: Verdana, "sans-serif";
-    font-size: 9px;
+  &__content {
+	p {
+	  padding:30px;
+	  text-align: left;
+	}
   }
+}
+
+.betting-links {
+  margin-top:10px;
+  font-family: Verdana, "sans-serif";
+  font-size: 9px;
+}
+footer {
+  margin-top:10px;
 }
 .white {
   color:white;
