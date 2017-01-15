@@ -4,35 +4,17 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/stylesheets/css/bootstrap.css">
-    <script>
-        $(document).ready(function(){
-            $(".show-more-info__content").on('show.bs.collapse', function(){
-                $(".promotion-cover > h3").toggleClass("hidden")
-            }).on('hide.bs.collapse', function(){
-                $(".promotion-cover > h3").toggleClass("hidden")
-            });
-
-            $(".cta-banner").on('click', function() {
-                if ($(this).hasClass('active')) {
-                    $(".cta-banner").removeClass('active');
-                }
-                else {
-                    $(".cta-banner").removeClass('active');
-                    $(this).addClass('active');
-                }
-            })
-        });
-    </script>
+    <script type="application/javascript" src="assets/js/index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Tech Test</title>
+    <title>The Workshop</title>
 </head>
 <body>
 <div class="wrapper">
     <nav class="container">
         <div class="row">
             <div class="col-xs-12 nav">
-                <a class="brand hidden-xs"><img src="assets/img/brand.png" /></a>
+                <a class="brand hidden-xs"><img src="assets/img/brand.png" alt="brand" /></a>
                 <a class="nav-icon poker" href="#"></a>
                 <a class="nav-icon casino" href="#"></a>
                 <a class="nav-icon sports" href="#"></a>
@@ -55,12 +37,12 @@
                     <h1 class="text-uppercase">Are You Ready</h1>
                     <h2 class="text-uppercase">For Some Action?</h2>
                     <h3 class="hidden"><span>Bodog</span> Official Betting Partner to Fulham FC</h3>
-                    <img src="assets/img/fulham.png" class="fulham-badge"/>
+                    <img src="assets/img/fulham.png" class="fulham-badge" alt="Fulham FC"/>
                     <a class="cta-basic__join-now"></a>
                 </div>
             </div>
         </div>
-        <div class="row banner-content text-uppercase">
+        <div class="row content text-uppercase">
             <div class="col-sm-4 col-xs-12">
                 <p>Start Playing In 3 Steps</p>
                 <ul>
@@ -78,19 +60,19 @@
                 </ul>
             </div>
         </div>
-        <div class="row banner-content hidden-xs hidden-sm">
+        <div class="row content hidden-xs hidden-sm">
             <div class="col-sm-4 col-xs-12 no-padding">
-                <a class="cta-banner cta-banner__poker" href="#"></a>
+                <div class="cta-banner cta-banner__poker"></div>
             </div>
             <div class="col-sm-4 col-xs-12 no-padding">
-                <a class="cta-banner cta-banner__casino" href="#"></a>
+                <div class="cta-banner cta-banner__casino"></div>
             </div>
             <div class="col-sm-4 col-xs-12 no-padding">
-                <a class="cta-banner cta-banner__sports" href="#"></a>
+                <div class="cta-banner cta-banner__sports"></div>
             </div>
         </div>
 
-        <div id="carousel-example-generic" class="carousel slide visible-sm visible-xs" data-ride="carousel">
+        <div id="cta-buttons-carousel" class="carousel slide visible-sm visible-xs" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -112,11 +94,11 @@
             </div>
 
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <a class="left carousel-control" href="#cta-buttons-carousel" role="button" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <a class="right carousel-control" href="#cta-buttons-carousel" role="button" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>

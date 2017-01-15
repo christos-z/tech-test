@@ -7744,6 +7744,11 @@ button.close {
   padding-right: 15px;
 }
 
+.brand {
+  display: block;
+  margin: 10px 20px 0;
+}
+
 .nav {
   background: #000000;
   padding: 0;
@@ -7842,6 +7847,7 @@ button.close {
 }
 
 .promotion-cover h1, .promotion-cover h2, .promotion-cover h3 {
+  white-space: nowrap;
   font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 50px;
@@ -7922,50 +7928,27 @@ button.close {
   background-position-y: -370px;
 }
 
-.wrapper {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  background: #2D3940;
-}
-
-.container {
-  background: #000000;
-  max-width: 750px;
-  font-size: 11px;
-}
-
-.main-content {
-  padding: 1px;
-}
-
-.brand {
-  display: block;
-  margin: 10px 20px 0;
-}
-
-.banner-content {
+.content {
   padding: 20px 30px 0;
   color: white;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .banner-content {
+  .content {
     margin-top: 20px;
   }
 }
 
-.banner-content p {
+.content p {
   font-weight: 800;
 }
 
-.banner-content .no-padding {
+.content .no-padding {
   padding: 0;
 }
 
-.banner-content ul {
+.content ul {
   color: #CCCCCC;
   padding: 0;
   list-style: none;
@@ -7991,15 +7974,6 @@ button.close {
   background-position-y: -154px;
 }
 
-.carousel-inner {
-  height: 180px;
-  text-align: center;
-}
-
-.carousel-control {
-  bottom: 55px;
-}
-
 .show-more-info {
   font-family: Verdana, "sans-serif";
   display: block;
@@ -8018,6 +7992,15 @@ button.close {
 .show-more-info__content p {
   padding: 20px 30px 10px;
   text-align: left;
+}
+
+.carousel-inner {
+  height: 180px;
+  text-align: center;
+}
+
+.carousel-control {
+  bottom: 55px;
 }
 
 .betting-links {
@@ -8047,4 +8030,23 @@ footer.container {
 
 .white {
   color: white;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #2D3940;
+}
+
+.container {
+  background: #000000;
+  max-width: 750px;
+  font-size: 11px;
+}
+
+.main-content {
+  padding: 1px;
 }
