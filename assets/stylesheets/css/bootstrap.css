@@ -296,8 +296,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../../node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -7745,14 +7745,27 @@ button.close {
 }
 
 .nav {
+  background: #000000;
+  padding: 0;
+  margin-bottom: 10px;
   display: flex;
   display: -webkit-flex;
+  display: -ms-flexbox;
   align-items: center;
   -webkit-align-items: center;
 }
 
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    z-index: 999;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+}
+
 .nav .nav-icon {
-  flex-shrink: 0;
+  display: inline-block;
   margin: 0 0.5px;
   height: 57px;
   width: 82px;
@@ -7782,45 +7795,127 @@ button.close {
 }
 
 .sub-nav {
+  padding-top: 2px;
+  padding-bottom: 5px;
   background: #1B2226;
 }
 
-.sub-nav > span, .sub-nav > span > a {
+@media (max-width: 768px) {
+  .sub-nav {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-nav {
+    text-align: center;
+  }
+}
+
+.sub-nav > span, .sub-nav > span > a, .bottom-nav > span > a {
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   color: #85A5B1;
 }
 
+.bottom-nav {
+  padding-top: 2px;
+  padding-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid black;
+}
+
+@media (max-width: 480px) {
+  .bottom-nav {
+    text-align: center;
+  }
+  .bottom-nav .text-right {
+    text-align: center;
+  }
+}
+
 .promotion-cover {
   background: url(../../../assets/img/cover-image.png) no-repeat;
   height: 260px;
-  background-size: contain;
+  background-size: cover;
   padding-top: 20px;
 }
 
-.promotion-cover h1, .promotion-cover h2 {
+.promotion-cover h1, .promotion-cover h2, .promotion-cover h3 {
   font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  text-align: right;
   font-size: 50px;
   line-height: 40px;
-  margin: 0 100px;
+  text-align: right;
+  margin: 0 100px 0 0;
+}
+
+@media (max-width: 768px) {
+  .promotion-cover h1, .promotion-cover h2, .promotion-cover h3 {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotion-cover h1, .promotion-cover h2, .promotion-cover h3 {
+    top: 50px;
+    position: relative;
+    font-size: 30px;
+    line-height: 28px;
+  }
 }
 
 .promotion-cover h2 {
   color: #C50D00;
 }
 
+.promotion-cover h3 {
+  height: 0;
+  font-size: 19px;
+}
+
+@media (max-width: 480px) {
+  .promotion-cover h3 {
+    font-size: 12px;
+  }
+}
+
+.promotion-cover h3 span {
+  color: #C50D00;
+}
+
+.promotion-cover .fulham-badge {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .promotion-cover .fulham-badge {
+    bottom: 40px;
+    right: 25px;
+  }
+}
+
 .promotion-cover .cta-basic__join-now {
   cursor: pointer;
   height: 58px;
-  width: 184px;
+  width: 182px;
   background: url(../../../assets/img/sprite.png) -2px -315px;
   border: 5px black solid;
   border-radius: 10px;
   display: flex;
   display: -webkit-flex;
-  margin: 125px auto;
+  margin: auto;
+  position: relative;
+  top: 130px;
+}
+
+@media (max-width: 480px) {
+  .promotion-cover .cta-basic__join-now {
+    top: 154px;
+  }
 }
 
 .promotion-cover .cta-basic__join-now:hover {
@@ -7828,12 +7923,17 @@ button.close {
 }
 
 .wrapper {
-  background: red;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #2D3940;
 }
 
 .container {
   background: #000000;
   max-width: 750px;
+  font-size: 11px;
 }
 
 .main-content {
@@ -7841,18 +7941,24 @@ button.close {
 }
 
 .brand {
-  font-weight: 800;
-  font-size: 2em;
-  background: linear-gradient(#FF5751, darkred);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-right: 10px;
+  display: block;
+  margin: 10px 20px 0;
 }
 
 .banner-content {
-  padding: 30px;
+  padding: 20px 30px 0;
   color: white;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    margin-top: 20px;
+  }
+}
+
+.banner-content p {
+  font-weight: 800;
 }
 
 .banner-content .no-padding {
@@ -7860,11 +7966,12 @@ button.close {
 }
 
 .banner-content ul {
+  color: #CCCCCC;
   padding: 0;
   list-style: none;
 }
 
-.banner-content .cta-banner {
+.cta-banner {
   cursor: pointer;
   display: inline-block;
   height: 120px;
@@ -7872,23 +7979,34 @@ button.close {
   background: url(../../../assets/img/sprite.png);
 }
 
-.banner-content .cta-banner__casino {
+.cta-banner__casino {
   background-position-x: 480px;
 }
 
-.banner-content .cta-banner__sports {
+.cta-banner__sports {
   background-position-x: 237px;
 }
 
-.banner-content .cta-banner__poker:hover, .banner-content .cta-banner__casino:hover, .banner-content .cta-banner__sports:hover {
+.cta-banner__poker:hover, .cta-banner__casino:hover, .cta-banner__sports:hover, .cta-banner.active {
   background-position-y: -154px;
 }
 
+.carousel-inner {
+  height: 180px;
+  text-align: center;
+}
+
+.carousel-control {
+  bottom: 55px;
+}
+
 .show-more-info {
+  font-family: Verdana, "sans-serif";
   display: block;
   background: #16191C;
   padding: 5px;
   text-align: center;
+  color: white;
 }
 
 .show-more-info a {
@@ -7898,18 +8016,33 @@ button.close {
 }
 
 .show-more-info__content p {
-  padding: 30px;
+  padding: 20px 30px 10px;
   text-align: left;
 }
 
 .betting-links {
+  color: #636363;
   margin-top: 10px;
   font-family: Verdana, "sans-serif";
   font-size: 9px;
+  line-height: 6px;
 }
 
-footer {
-  margin-top: 10px;
+@media (min-width: 768px) {
+  .betting-links > div:first-child > p {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .betting-links {
+    margin-left: 10px;
+  }
+}
+
+footer.container {
+  background: #2D3940;
+  margin-top: 5px;
 }
 
 .white {

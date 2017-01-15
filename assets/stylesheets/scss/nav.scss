@@ -1,10 +1,20 @@
 .nav {
+  @media (max-width: $screen-sm-min) {
+    position: fixed;
+    z-index: 999;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
+  background: #000000;
+  padding:0;
+  margin-bottom: 10px;
   display: flex;
   display: -webkit-flex;
+  display: -ms-flexbox;
   align-items:center ;
   -webkit-align-items:center ;
   .nav-icon {
-    flex-shrink: 0;
+    display: inline-block;
     margin:0 0.5px;
     height: 57px;
     width: 82px;
@@ -29,10 +39,30 @@
   }
 }
 .sub-nav {
+  @media (max-width: $screen-sm-min) {
+    margin-top: 60px;
+  }
+  @media (max-width: $screen-xs-min) {
+    text-align: center;
+  }
+    padding-top: 2px;
+  padding-bottom: 5px;
   background: #1B2226;
 }
-.sub-nav > span, .sub-nav > span > a {
+.sub-nav > span, .sub-nav > span > a, .bottom-nav > span > a{
   font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:11px;
   color:#85A5B1;
+}
+.bottom-nav {
+  padding-top: 2px;
+  padding-bottom: 5px;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid black;
+  @media (max-width: $screen-xs-min) {
+    text-align: center;
+    .text-right {
+      text-align: center;
+    }
+  }
 }
