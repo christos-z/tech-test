@@ -1,4 +1,4 @@
-# tech-test
+# Tech Test - The Workshop
 
 Download and run npm install.
 
