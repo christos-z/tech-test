@@ -7994,6 +7994,11 @@ button.close {
   text-align: left;
 }
 
+.content-divider {
+  border: 1px solid #2D3940;
+  margin: 10px -1px;
+}
+
 .carousel-inner {
   height: 180px;
   text-align: center;
