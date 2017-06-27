@@ -1,0 +1,26 @@
+{
+  "name": "tech-test",
+  "version": "1.0.0",
+  "description": "Pulselive Tech test",
+  "main": "gulp.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christos-z/tech-test.git"
+  },
+  "author": "Christos Zenonos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christos-z/tech-test/issues"
+  },
+  "homepage": "https://github.com/christos-z/tech-test#readme"
+}
