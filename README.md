@@ -1,7 +1,11 @@
-# Tech Test - The Workshop
+# QGO Desktop Assessment
 
-Download and run npm install.
+## Overview
 
-Once all packages and dependencies are installed, simply open index.html in your browser and you're done.
+The test is completes all objectives required and is a MVP, and is unit tested
 
-Alternatively you can view a live copy here http://www.christoszenonos.com/tech-tests/the-workshop/
+There are however improvements to the application that can be made. 
+
+* There is no persisent storage, ideally the test state would persist within local storage, so that changes are not lost upon refresh.
+* The test lacks any custom styling. Ideally the test should be fully responsive with styled components and elements.
+* The unit tests could be more thorough, such as testing button clicks, and ensuring this reacts with the reducer, and updates the store as expected.
